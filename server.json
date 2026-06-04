@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.eZhing/runik-ai",
+  "title": "Runik AI",
+  "description": "Business management platform via conversation. Describe your business and AI builds your complete system — tables, views, dashboards, chatbot — in 2 minutes. 40+ MCP tools, 26 industry templates, free.",
+  "version": "1.0.1",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://runikapp.com/mcp"
+    },
+    {
+      "type": "sse",
+      "url": "https://runikapp.com/mcp/sse"
+    }
+  ]
+}
