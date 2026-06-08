@@ -1,3 +1,8 @@
+---
+name: runik-business-management
+description: Manage business data through natural language. Query clients, create records, view dashboards, generate reports, and automate tasks using 40+ MCP tools across 26 industry templates.
+---
+
 # Runik AI — Business Management Skill
 
 ## Purpose
