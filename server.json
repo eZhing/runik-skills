@@ -3,7 +3,7 @@
   "name": "io.github.eZhing/runik-ai",
   "title": "Runik AI",
   "description": "Chat-first business management. 40+ tools, 26 templates. Describe your business, done.",
-  "version": "1.0.1",
+  "version": "1.2.1",
   "remotes": [
     {
       "type": "streamable-http",
@@ -12,6 +12,76 @@
     {
       "type": "sse",
       "url": "https://runikapp.com/mcp/sse"
+    }
+  ],
+  "skills": [
+    {
+      "name": "business_report",
+      "description": "Generate an executive report of your business with KPIs, alerts and recommendations",
+      "arguments": [
+        { "name": "period", "description": "Time period: today, week, month, quarter", "required": false }
+      ]
+    },
+    {
+      "name": "setup_business",
+      "description": "Describe your business and get a complete system with tables, views and sample data",
+      "arguments": [
+        { "name": "description", "description": "Your business description, e.g. 'hotel with 15 rooms' or 'dental clinic with 3 dentists'", "required": true }
+      ]
+    },
+    {
+      "name": "query_data",
+      "description": "Ask questions about your data in natural language",
+      "arguments": [
+        { "name": "question", "description": "Your question, e.g. 'who owes me money', 'available rooms today', 'low stock items'", "required": true }
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "name": "business_report",
+      "description": "Generate an executive report with KPIs, metrics, alerts and next steps for your business",
+      "arguments": [
+        { "name": "period", "description": "Time period: today, week, month", "required": false }
+      ]
+    },
+    {
+      "name": "setup_business",
+      "description": "Create a complete business system from a description. Generates tables, fields, relationships, views and sample data.",
+      "arguments": [
+        { "name": "description", "description": "Describe your business: industry, size, what you need to manage", "required": true }
+      ]
+    },
+    {
+      "name": "prepare_email",
+      "description": "Draft a professional email using real data from your business",
+      "arguments": [
+        { "name": "topic", "description": "What the email is about, e.g. 'monthly sales summary', 'overdue payments reminder'", "required": true }
+      ]
+    },
+    {
+      "name": "analyze_data",
+      "description": "Analyze your business data and get insights, trends and recommendations",
+      "arguments": [
+        { "name": "question", "description": "What you want to analyze, e.g. 'sales trend this quarter', 'top clients by revenue'", "required": true }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "name": "schema",
+      "description": "Complete database schema with all tables, columns, types and relationships",
+      "uri": "runik://schema"
+    },
+    {
+      "name": "views",
+      "description": "List of configured views (kanban, calendar, dashboard, chart, etc.)",
+      "uri": "runik://views"
+    },
+    {
+      "name": "templates",
+      "description": "26 industry templates available for installation (CRM, Hotel, Restaurant, Clinic, etc.)",
+      "uri": "runik://templates"
     }
   ]
 }
