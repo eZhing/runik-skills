@@ -3,7 +3,17 @@
   "name": "io.github.eZhing/runik-ai",
   "title": "Runik AI",
   "description": "Chat-first business management. 40+ tools, 26 templates. Describe your business, done.",
-  "version": "1.2.1",
+  "version": "1.2.2",
+  "connections": {
+    "streamable-http": {
+      "url": "https://runikapp.com/mcp",
+      "auth": "oauth2"
+    },
+    "sse": {
+      "url": "https://runikapp.com/mcp/sse",
+      "auth": "oauth2"
+    }
+  },
   "remotes": [
     {
       "type": "streamable-http",
